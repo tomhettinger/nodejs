@@ -1,0 +1,30 @@
+{
+  "name": "imageproc",
+  "version": "1.0.0",
+  "description": "API for processing images.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src/'index.ts'",
+    "prettier": "prettier --config .prettierrc 'src/*.ts' --write",
+    "start": "nodemon src/index",
+    "build": "npx tsc",
+    "jasmine": "jasmine",
+    "test": "npm run build && npm run jasmine "
+  },
+  "keywords": [],
+  "author": "Thomas Hettinger",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine": "^3.8.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.8.2",
+    "@types/node": "^16.6.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.2"
+  }
+}
