@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint src/**/*.ts",
     "prettier": "prettier --config .prettierrc src/**/*.ts --write",
-    "start": "nodemon src/index",
+    "start": "nodemon src/index.ts",
     "build": "npx tsc",
     "jasmine": "jasmine",
     "test": "npm run build && npm run jasmine "
@@ -15,16 +15,22 @@
   "author": "Thomas Hettinger",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "jasmine": "^3.8.0",
-    "jasmine-spec-reporter": "^7.0.0",
-    "typescript": "^4.3.5"
+    "jasmine-spec-reporter": "^7.0.0"
   },
   "devDependencies": {
+    "@types/express": "^4.17.13",
     "@types/jasmine": "^3.8.2",
     "@types/node": "^16.6.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "prettier": "^2.3.2"
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2",
+    "ts-node": "^10.2.0",
+    "typescript": "^4.3.5"
   }
 }
