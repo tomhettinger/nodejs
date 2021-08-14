@@ -4,8 +4,8 @@
   "description": "API for processing images.",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint src/'index.ts'",
-    "prettier": "prettier --config .prettierrc 'src/*.ts' --write",
+    "lint": "eslint src/**/*.ts",
+    "prettier": "prettier --config .prettierrc src/**/*.ts --write",
     "start": "nodemon src/index",
     "build": "npx tsc",
     "jasmine": "jasmine",
