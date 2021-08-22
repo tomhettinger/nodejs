@@ -1,6 +1,6 @@
 import express from 'express';
-import {createDir, fileExists} from '../filesysutils';
-import {createThumbnailFromPath} from '../imageprocessing';
+import {createDir, fileExists} from '../utilities/filesysutils';
+import {createThumbnailFromPath} from '../utilities/imageprocessing';
 import path from 'path';
 
 const thumbnailDir = './resources/thumbnail/';
