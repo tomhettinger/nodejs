@@ -1,5 +1,5 @@
 import express from 'express';
-import {createDir, fileExists} from '../files';
+import {createDir, fileExists} from '../filesysutils';
 import {createThumbnailFromPath} from '../imageprocessing';
 import path from 'path';
 
@@ -34,7 +34,8 @@ export const createThumbnail = async (req: express.Request, res: express.Respons
 
     // Create the full paths
     const inPath = path.join(fullDir, String(filename));
-    const outPath = path.join(thumbnailDir, String(filename))
+    const outFilename = `${width}x${height}_${filename}`
+    const outPath = path.join(thumbnailDir, outFilename)
     res.locals.inPath = inPath
     res.locals.outPath = outPath
     console.log(`Request to create thumbnail of ${inPath} with size ${width} by ${height}.`)
