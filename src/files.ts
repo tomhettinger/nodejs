@@ -1,14 +1,17 @@
 import fs from 'fs';
 
-const thumbnailDir = './resources/thumbnail/';
-
-export default async function createThumbnailDir(): Promise<string> {
-  return new Promise((resolve, reject) => {
-    console.log(`Creating thumbnail directory ${thumbnailDir}`);
-    if (!fs.existsSync(thumbnailDir)) {
-      fs.mkdirSync(thumbnailDir);
+export function createDir(directory: string): void {
+    console.log(`Creating directory ${directory}`);
+    if (!fs.existsSync(directory)) {
+        fs.mkdirSync(directory);
+        console.log(`Directory ${directory} created.`);
     }
-    console.log('Directory created.');
-    resolve('Done.');
-  });
+    else {
+        console.log(`Directory ${directory} already exists.`);
+    }
+
+}
+
+export function fileExists(inPath: string): Boolean {
+    return fs.existsSync(inPath)
 }
