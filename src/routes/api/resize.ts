@@ -5,7 +5,7 @@ const resize = express.Router();
 
 resize.use([createThumbnailDirectory, createThumbnail, sendThumbnail]);
 
-resize.get('/', (req, res) => {
+resize.get('/', () => {
   console.log('Middleware finished execution.');
 });
 
