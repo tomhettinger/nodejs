@@ -11,3 +11,5 @@ app.use('/', routes);
 app.listen(port, () => {
   console.log(`Server is up at localhost:${port}.`);
 });
+
+export default app;
