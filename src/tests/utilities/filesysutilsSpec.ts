@@ -11,21 +11,20 @@ describe('Test suite for fileExists', () => {
   });
 });
 
-
 describe('Test suite for createDir', () => {
-  const testDir = './resources/tests/test_createDir/'
+  const testDir = './resources/tests/test_createDir/';
 
   // Remove directory if it exists already
-  beforeEach(function() {
+  beforeEach(function () {
     if (fs.existsSync(testDir)) {
-        fs.rmdirSync(testDir);
+      fs.rmdirSync(testDir);
     }
   });
 
   // Teardown, remove any directory created
-  afterEach(function() {
+  afterEach(function () {
     if (fs.existsSync(testDir)) {
-        fs.rmdirSync(testDir);
+      fs.rmdirSync(testDir);
     }
   });
 
@@ -33,5 +32,4 @@ describe('Test suite for createDir', () => {
     createDir(testDir);
     expect(fs.existsSync(testDir)).toBe(true);
   });
-
 });
